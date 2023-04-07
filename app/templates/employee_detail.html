@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ employee.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">ИНН: {{ employee.inn }} </h6>
+            <h6 class="card-subtitle mb-2 text-muted">Заработная плата: {{ employee.position.wage }} сом</h6>
+            <p class="card-text">Должность {{ employee.position.name }} {{ employee.position.department }}</p>
+            <a href="#" class="card-link">Изменить</a>
+            <a href="#" class="card-link">Удалить</a>
+          </div>
+        </div>
+    </div>
+{% endblock %}

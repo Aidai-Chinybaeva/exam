@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="form-group">
+      <form method="POST">
+          <p>Вы действительно хотите удалить сотрудника {{ employee.name }} № {{ employee.id }}</p>
+          <input type="submit" value="Удалить" class="btn btn-danger"/>
+      </form>
+    </div>
+
+{% endblock %}

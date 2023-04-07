@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="mb-5 text-center">Список сотрудников</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Отдел</th>
+          <th scope="col">Должность</th>
+          <th scope="col">ФИО</th>
+          <th scope="col">Дата Рождения</th>
+          <th scope="col">Заработная плата</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for employee in employees %}
+        <tr>
+          <th scope="row">{{ employee.id }}</th>
+          <td>{{ employee.position.department }}</td>
+          <td>{{ employee.position.name }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.inn }}</td>
+          <td>{{ employee.position.wage }}</td>
+          <td>
+            <a class="btn btn-warning" href="#"> Подробнее</a>
+            <a class="btn btn-danger" href="#"> Удалить</a>
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+{% endblock %}
